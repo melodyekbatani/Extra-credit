@@ -165,3 +165,22 @@ body {
 		background: var(--rothko-orange);
 	}
 }
+
+/* Noland Artwork */
+/* In order to create the stripped effect going on in the painting, I thought back to project 5 where I created the stripped background in my girl dinner generator also referencing this stack overflow to figure out how to space them and create a linear gradient with multiple colors https://stackoverflow.com/questions/17348108/css-stripe-with-multiple-colors */
+
+.artwork.noland {
+    aspect-ratio: 9/16;
+    filter: blur(var(--blur));
+    background: linear-gradient(
+        to bottom,
+		#f3e1c1 0%    1%,
+        #bb5535 1%    6%,
+		#f3e1c1 6%    7%,
+        #3d8c40 7%    8%,
+		#faf4e9 8%    9%,
+        #1a2868 7%    8%,
+        #f2ede0 8%    10%,
+        #c03070 10% 11%
+    );
+}
