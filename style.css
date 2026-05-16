@@ -32,10 +32,11 @@
 	--font-size-lg: 3rem;
 
 	/* Blur */
-	--blur: 0.02rem;
+	--blur: 0.06rem;
 }
-/* Typography */
 
+
+/* Typography */
 h1, h2, p, time {
 	font-family: var(--font);
 	color: var(--black);
@@ -50,7 +51,6 @@ h1 {
 h2 {
 	font-size: var(--font-size-md);
 	font-weight: 500;
-	line-height: 1;
 }
 
 h3 {
@@ -128,5 +128,40 @@ body {
 	.tombstone {
 		display: grid;
 		gap: var(--space-xs);
+	}
+}
+/* Rothko Artwork*/
+.artwork.rothko {
+	aspect-ratio: 9/16;
+	background: var(--rothko-base);
+	filter: blur(var(--blur));
+
+	span {
+		position: absolute;
+	}
+
+	.field-top,
+	.field-middle,
+	.field-bottom {
+		inset-inline-start: 4%;
+		inline-size: 92%;
+	}
+
+	.field-top {
+		inset-block-start: 6%;
+		block-size: 47%;
+		background: var(--rothko-yellow);
+	}
+
+	.field-middle {
+		inset-block-start: 53%;
+		block-size: 13%;
+		background: var(--rothko-red);
+	}
+
+	.field-bottom {
+		inset-block-start: 66%;
+		block-size: 30%;
+		background: var(--rothko-orange);
 	}
 }
