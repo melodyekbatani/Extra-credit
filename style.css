@@ -34,3 +34,43 @@
 	/* Blur */
 	--blur: 0.02rem;
 }
+/* Typography */
+
+h1, h2, p, time, cite, a {
+    font-family: var(--font);
+    color: var(--black);
+}
+
+h1 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    line-height: 90%;
+}
+
+h2 {
+    font-size: var(--font-size-md);
+    font-weight: 500;
+    line-height: 1;
+}
+
+h3 {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    line-height: 135%;
+}
+
+p {
+    font-size: var(--font-size-sm);
+    line-height: 135%;
+}
+
+a {
+	text-decoration: underline;
+}
+time {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    color: var(--muted);
+    line-height: 135%;
+}
