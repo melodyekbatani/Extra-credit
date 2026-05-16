@@ -1,0 +1,36 @@
+:root {
+	/* Colors */
+	--white: #ffffff;
+	--black: #171614;
+	--muted: #6b7280;
+
+	/* Rothko palette */
+	--rothko-base: #cda432;
+	--rothko-yellow: #e2b91f;
+	--rothko-red: #bd3528;
+	--rothko-orange: #dc8728;
+	--rothko-light: #efe2ba;
+
+	/* Layout */
+	--border: 0.08rem solid var(--black);
+	--thread-height: 0.14rem;
+	--thread-opacity: 0.92;
+
+	/* Spacing */
+	--space-xs: 0.5rem;
+	--space-sm: 0.875rem;
+	--space-md: 1.25rem;
+	--space-lg: 2rem;
+	--space-xl: 3rem;
+
+	/* Typography */
+	--font: 'Geist', sans-serif;
+	--font-mono: 'Geist Mono', monospace;
+	--font-size-xs: 0.875rem;
+	--font-size-sm: 1rem;
+	--font-size-md: 1.5rem;
+	--font-size-lg: 3rem;
+
+	/* Blur */
+	--blur: 0.02rem;
+}
