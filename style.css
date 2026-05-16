@@ -2,7 +2,7 @@
 	/* Colors */
 	--white: #ffffff;
 	--black: #171614;
-	--muted: #6b7280;
+	--grey: #6b7280;
 
 	/* Rothko palette */
 	--rothko-base: #cda432;
@@ -36,41 +36,97 @@
 }
 /* Typography */
 
-h1, h2, p, time, cite, a {
-    font-family: var(--font);
-    color: var(--black);
+h1, h2, p, time {
+	font-family: var(--font);
+	color: var(--black);
 }
 
 h1 {
-    font-size: var(--font-size-lg);
-    font-weight: 600;
-    line-height: 90%;
+	font-size: var(--font-size-lg);
+	font-weight: 600;
+	line-height: 90%;
 }
 
 h2 {
-    font-size: var(--font-size-md);
-    font-weight: 500;
-    line-height: 1;
+	font-size: var(--font-size-md);
+	font-weight: 500;
+	line-height: 1;
 }
 
 h3 {
-    font-family: var(--font-mono);
-    font-size: var(--font-size-xs);
-    font-weight: 500;
-    line-height: 135%;
+	font-family: var(--font-mono);
+	font-size: var(--font-size-xs);
+	font-weight: 500;
+	line-height: 135%;
 }
 
 p {
-    font-size: var(--font-size-sm);
-    line-height: 135%;
+	font-size: var(--font-size-sm);
+	line-height: 135%;
+	color: var(--muted);
+	max-inline-size: 36rem;
 }
 
 a {
-	text-decoration: underline;
+	justify-self: start;
+	color: var(--black);
+	font-family: var(--font-mono);
+	font-size: var(--font-size-xs);
+	font-weight: 500;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset-block-end: -0.15rem;
+		inset-inline-start: 0;
+		inline-size: 0;
+		block-size: 0.08rem;
+		background: currentColor;
+		transition: inline-size 300ms ease;
+	}
+
+	&:hover::after {
+		inline-size: 100%;
+	}
 }
+
 time {
-    font-family: var(--font-mono);
-    font-size: var(--font-size-xs);
-    color: var(--muted);
-    line-height: 135%;
+	font-family: var(--font-mono);
+	font-size: var(--font-size-xs);
+	color: var(--grey);
+	line-height: 135%;
+}
+
+/* Base */
+body {
+	background: var(--white);
+	color: var(--black);
+}
+
+.project {
+	display: flex;
+	flex-direction: column;
+	padding: var(--space-lg);
+	gap: var(--space-xl);
+}
+
+/* Intro */
+.intro {
+	display: grid;
+	gap: var(--space-md);
+}
+
+/* Captions */
+.caption figcaption {
+	display: grid;
+	gap: var(--space-sm);
+
+	.tombstone {
+		display: grid;
+		gap: var(--space-xs);
+	}
 }
