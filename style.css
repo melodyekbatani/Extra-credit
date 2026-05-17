@@ -158,7 +158,7 @@ figure figcaption {
 		position: absolute;
 	}
 
-	/* Noland Artwork */
+	/* Thought about using rem units at first, but later I decided to switch this to percentages so that it fits within the design system of the noland piece using linear gradients with percentages */
 	.field-top,
 	.field-middle,
 	.field-bottom {
