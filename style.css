@@ -57,10 +57,13 @@ h2 {
 }
 
 h3 {
+	color: var(--grey);
 	font-family: var(--font-mono);
 	font-size: var(--font-size-xs);
 	font-weight: 500;
 	line-height: 135%;
+	text-transform: uppercase;
+
 }
 
 p {
@@ -80,6 +83,7 @@ a {
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
 	position: relative;
+	padding-block-start: var(--space-sm);
 
 	&::after {
 		content: '';
@@ -102,6 +106,7 @@ time {
 	font-size: var(--font-size-xs);
 	color: var(--grey);
 	line-height: 135%;
+	font-weight: 500;
 }
 
 /* Base */
@@ -122,6 +127,7 @@ body {
 	position: relative;
 	overflow: hidden;
 	inline-size: 100%;
+	max-block-size: 65vh;
 }
 
 /* Intro */
@@ -143,7 +149,13 @@ figure figcaption {
 
 	.tombstone {
 		display: grid;
-		gap: var(--space-xs);
+		grid-template-columns: auto 1fr;
+		gap: var(--space-xs) var(--space-sm);
+		align-items: baseline;
+
+		p, a {
+			grid-column: 1 / -1;
+		}
 	}
 }
 
@@ -249,7 +261,7 @@ figure figcaption {
 
 	:root {
 		--font-size-lg: 3rem;
-		--font-size-sm: 0.75rem;
+		--font-size-sm: 1rem;
 		--font-size-xs: 1rem;
 		--font-size-md: 1.2rem;
 	}
