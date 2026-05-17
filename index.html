@@ -1,13 +1,11 @@
 <head>
-	<meta charset="UTF-8" />
+	<meta charset="UTF-8"/>
 	<title>Field / Structure - extra-credit for Typography and Interaction</title>
-	<link href="/Icons/Favicon.ico" rel="icon" sizes="any">
-	<link href="/Icons/Favicon.svg" rel="icon" type="image/svg+xml">
-	<link href="/Icons/Touch.png" rel="apple-touch-icon">
 	<meta name="description"
-	content="Field / Structure is an extra credit project completed for Typography and Interaction, translating works by Mark Rothko and Kenneth Noland into CSS studies of color, atmosphere, and structure.">
+	content="Field / Structure is an extra-credit project completed for Typography and Interaction, translating works by Mark Rothko and Kenneth Noland into CSS through a study of color, atmosphere, and structure.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<!-- FONTS -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap" rel="stylesheet">
@@ -18,58 +16,48 @@
 </head>
 
 <body>
+	<!-- INTRO -->
 	<main class="project">
+		<header class="intro">
+			<h1>Field / Structure</h1>
+			<p>
+				This website looks at two paintings that use color as a structuring principal in very different ways. While Rothko's No. 5/No. 22 demonstrates a layered fields of yellow, red, and orange blurring into one another, Noland's New Day shapes color into horizontal bands that stretch across the canvas.
+			</p>
+		</header>
 
-		<div class="panel-text">
-			<header class="intro">
-				<h1>Field / Structure</h1>
-				<p>
-					Both paintings use color as structure, but in very different ways. While Rothko's No. 5/No. 22 demonstrates a layered fields of yellow, red, and orange blurring into one another, Noland's New Day, sharpens color into horizontal bands stretch across the canvas.
-				</p>
-			</header>
-
-			<section class="captions">
-				<figure class="caption rothko is-active" data-work="rothko">
-					<figcaption>
-						<h2><cite>No. 5/No. 22</cite></h2>
-						<section class="tombstone">
-							<h3>Mark Rothko</h3>
-							<time datetime="1950">1950</time>
-							<p class="description">
-								Rothko organizes the canvas through broad horizontal fields with their softened edges used to make the color feel suspended, turning simple blocks into an atmospheric space.
-							</p>
-						</section>
-						<a href="https://www.moma.org/collection/works/80566"> View original </a>
-					</figcaption>
-				</figure>
-
-				<figure class="caption noland" data-work="noland">
-					<figcaption>
-						<h2><cite>New Day</cite></h2>
-						<section class="tombstone">
-							<h3>Kenneth Noland</h3>
-							<time datetime="1967">1967</time>
-							<p class="description">
-								Noland's work is shaped around a field of horizontal bands using color as subject to keep each edge sharp. The stripes run uninterrupted to the canvas edge, carrying the eye
-								back and forth across a surface. 
-							</p>
-						</section>
-						<a href="https://whitney.org/collection/works/2425"> View original </a>
-					</figcaption>
-				</figure>
-			</section>
-		</div>
-
-		<!-- Artworks -->
-		<section class="panel-art">
-			<div class="artwork rothko" data-work="rothko" aria-label="CSS interpretation of Mark Rothko's No. 5/No. 22 from 1950">
+		<figure class="rothko">
+			<div class="artwork rothko">
 				<span class="field-top"></span>
 				<span class="field-middle"></span>
 				<span class="field-bottom"></span>
 			</div>
+			<figcaption>
+				<h2><cite>No. 5/No. 22</cite></h2>
+				<div class="tombstone">
+					<h3>Mark Rothko</h3>
+					<time datetime="1950">1950</time>
+					<p>
+						Rothko organizes the canvas through broad horizontal fields with their softened edges used to make the color feel suspended, turning simple blocks into an atmospheric space.
+					</p>
+				<a href="https://www.moma.org/collection/works/80566">View original</a>
+				</div>
+			</figcaption>
+		</figure>
 
+		<figure class="noland">
 			<div class="artwork noland"></div>
-		</section>
+			<figcaption>
+				<h2>New Day</h2>
+				<div class="tombstone">
+					<h3>Kenneth Noland</h3>
+					<time datetime="1967">1967</time>
+					<p>
+						Noland's work is shaped around a field of horizontal bands using color as the key subject, carrying the eye back and forth across a surface.
+					</p>
+				<a href="https://whitney.org/collection/works/2425">View original</a>
+				</div>
+			</figcaption>
+		</figure>
 	</main>
 </body>
 </html>

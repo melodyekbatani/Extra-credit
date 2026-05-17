@@ -11,14 +11,12 @@
 	--rothko-orange: #dc8728;
 	--rothko-light: #efe2ba;
 
-	/* Noland colors */
+	/* Noland key colors */
 	--Noland-light:#f2ede0;
 	--Noland-blue: #1a2868; 
 
 	/* Layout */
 	--border: 0.08rem solid var(--black);
-	--thread-height: 0.14rem;
-	--thread-opacity: 0.92;
 
 	/* Spacing */
 	--space-xs: 0.5rem;
@@ -30,13 +28,13 @@
 	/* Typography */
 	--font: 'Geist', sans-serif;
 	--font-mono: 'Geist Mono', monospace;
-	--font-size-xs: 0.875rem;
-	--font-size-sm: 1rem;
+	--font-size-xs: 1rem;
+	--font-size-sm: 1.2rem;
 	--font-size-md: 1.5rem;
 	--font-size-lg: 3rem;
 
 	/* Blur */
-	--blur: 0.06rem;
+	--blur: 0.1rem;
 }
 
 
@@ -53,6 +51,7 @@ h1 {
 }
 
 h2 {
+	padding-block-start: var(--space-md);
 	font-size: var(--font-size-md);
 	font-weight: 500;
 }
@@ -108,7 +107,6 @@ time {
 /* Base */
 body {
 	background: var(--white);
-	color: var(--black);
 }
 
 .project {
@@ -120,7 +118,6 @@ body {
 
 
 /* Artworks */
-
 .artwork {
 	position: relative;
 	overflow: hidden;
@@ -133,8 +130,14 @@ body {
 	gap: var(--space-md);
 }
 
-/* Captions */
-.caption figcaption {
+/* Figures */
+figure {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+}
+
+figure figcaption {
 	display: grid;
 	gap: var(--space-sm);
 
@@ -143,6 +146,8 @@ body {
 		gap: var(--space-xs);
 	}
 }
+
+
 /* Rothko Artwork*/
 .artwork.rothko {
 	aspect-ratio: 9/16;
@@ -219,7 +224,7 @@ body {
 		var(--Noland-light) 53%   54%,
 		#8ab080 54% 59%,
 		var(--Noland-light) 59%   60%,
-		#b0c0e0 61% 63%,
+		#b0c0e0 60% 63%,
 		var(--Noland-light) 63%   64%,
 		var(--Noland-light) 64%   66%,
 		#e0a080 66%   72%,
@@ -236,4 +241,67 @@ body {
 		#c32f48 96% 99%, 
 		var(--Noland-light) 99%   100%
 	);
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+
+
+	:root {
+		--font-size-lg: 3rem;
+		--font-size-sm: 0.75rem;
+		--font-size-xs: 1rem;
+		--font-size-md: 1.2rem;
+	}
+
+	.project {
+		display: grid;
+		grid-template-columns: 22% 1fr 1fr;
+		block-size: 100vh;
+		overflow: hidden;
+		padding: var(--space-lg);
+		gap: var(--space-md);
+	}
+
+	.intro {
+		grid-column: 1;
+		grid-row: 1;
+		align-self: start;
+	}
+
+	h2 {
+	padding-block-start: var(--space-sm);
+	font-size: var(--font-size-md);
+	font-weight: 500;
+}
+
+
+	figure.rothko {
+		grid-column: 2;
+		grid-row: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		block-size: 100%;
+	}
+
+	figure.noland {
+		grid-column: 3;
+		grid-row: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		block-size: 100%;
+	}
+
+	figure .artwork {
+		flex: 1;
+		min-block-size: 0;
+		max-block-size: 70vh;
+		inline-size: 100%;
+	}
+
+	figure figcaption {
+		flex-shrink: 0;
+	}
 }
