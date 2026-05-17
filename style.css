@@ -63,7 +63,7 @@ h3 {
 	font-weight: 500;
 	line-height: 135%;
 	text-transform: uppercase;
-
+	letter-spacing: 0.08em;
 }
 
 p {
@@ -85,19 +85,8 @@ a {
 	position: relative;
 	padding-block-start: var(--space-sm);
 
-	&::after {
-		content: '';
-		position: absolute;
-		inset-block-end: -0.15rem;
-		inset-inline-start: 0;
-		inline-size: 0;
-		block-size: 0.08rem;
-		background: currentColor;
-		transition: inline-size 300ms ease;
-	}
-
-	&:hover::after {
-		inline-size: 100%;
+	&:hover {
+		text-decoration: underline;
 	}
 }
 
@@ -151,7 +140,6 @@ figure figcaption {
 		display: grid;
 		grid-template-columns: auto 1fr;
 		gap: var(--space-xs) var(--space-sm);
-		align-items: baseline;
 
 		p, a {
 			grid-column: 1 / -1;
@@ -266,7 +254,7 @@ figure figcaption {
 
 	.project {
 		display: grid;
-		grid-template-columns: 22% 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
 		block-size: 100vh;
 		overflow: hidden;
 		padding: var(--space-lg);
@@ -306,7 +294,7 @@ figure figcaption {
 	figure .artwork {
 		flex: 1;
 		min-block-size: 0;
-		max-block-size: 70vh;
+		max-block-size: 65vh;
 		inline-size: 100%;
 	}
 
