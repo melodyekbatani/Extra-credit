@@ -142,7 +142,7 @@ figure figcaption {
 		gap: var(--space-xs) var(--space-sm);
 
 		p, a {
-			grid-column: 1 / -1;
+			grid-column: 1 / -1;  /* span both columns */
 		}
 	}
 }
