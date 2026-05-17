@@ -186,7 +186,7 @@ figure figcaption {
 
 /* Noland Artwork */
 /* In order to create the stripped effect going on in the painting, I thought back to project 5 where I created the stripped background in my girl dinner generator also referencing this stack overflow to figure out how to space them and create a linear gradient with multiple colors https://stackoverflow.com/questions/17348108/css-stripe-with-multiple-colors */
-
+/* Because there are so many colors here, I thought it would be best to only make the repeteting ones variables since the other colors are only used once throughout the project */
 .artwork.noland {
 	aspect-ratio: 9/16;
 	filter: blur(var(--blur));
